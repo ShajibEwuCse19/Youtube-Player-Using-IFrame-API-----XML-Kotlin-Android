@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var sizeButton: Button
     private lateinit var seekBar: SeekBar
     private lateinit var preview: ImageView
+    private lateinit var textViewPreview: TextView
     private lateinit var durationButton: Button
     private lateinit var currentDuration: TextView
 
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         preview = findViewById(R.id.iv_preview)
         durationButton = findViewById(R.id.btnDuration)
         currentDuration = findViewById(R.id.tv_time)
+        textViewPreview = findViewById(R.id.tv_preview)
 
         loadPreview()
 
@@ -155,6 +157,7 @@ class MainActivity : AppCompatActivity() {
                 isPlaying = true
                 startSeekBarUpdater()
                 preview.visibility = View.GONE
+                textViewPreview.visibility = View.GONE
             }
         }
 
